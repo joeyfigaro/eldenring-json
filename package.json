@@ -1,6 +1,6 @@
 {
   "name": "eldenring-json",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "description": "collection of available data for Elden Ring by Fromsoft",
@@ -8,6 +8,7 @@
     "build": "bun run build.mjs",
     "prebuild": "rm -rf dist",
     "build:types": "tsc --emitDeclarationOnly --noEmit false --declaration true",
+    "publish": "bunx @morlay/bunpublish",
     "prepublishOnly": "bun run build"
   },
   "files": [
