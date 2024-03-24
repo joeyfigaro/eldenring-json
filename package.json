@@ -3,25 +3,31 @@
   "version": "0.0.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "description": "",
+  "description": "collection of available data for Elden Ring by Fromsoft",
   "scripts": {
     "build": "bun run build.mjs",
+    "prebuild": "rm -rf dist",
+    "build:types": "tsc --emitDeclarationOnly --noEmit false --declaration true",
     "prepublishOnly": "bun run build"
   },
   "files": [
     "dist"
   ],
   "keywords": [
-    "bun"
+    "elden ring",
+    "fromsoft",
+    "gamedata",
+    "souls",
+    "json"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/wobsoriano/pkg-name#readme",
+  "homepage": "https://github.com/joeyfigaro/eldenring-json#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wobsoriano/pkg-name.git"
+    "url": "git+https://github.com/joeyfigaro/eldenring-json.git"
   },
-  "bugs": "https://github.com/wobsoriano/pkg-name/issues",
-  "author": "Robert Soriano <sorianorobertc@gmail.com>",
+  "bugs": "https://github.com/joeyfigaro/eldenring-json/issues",
+  "author": "Joey Figaro <coccyx_04rubato@icloud.com>",
   "devDependencies": {
     "bun-plugin-dts": "^0.2.1",
     "@types/bun": "^1.0.0",
