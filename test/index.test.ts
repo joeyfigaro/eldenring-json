@@ -1,8 +1,13 @@
-import { describe, it, expect } from 'bun:test';
-import { ammos } from '../src';
+import { describe, it, expect } from "bun:test";
+import * as json from "../src";
 
-describe('data exports', () => {
-  it('should include ammo', () => {
-    expect(ammos).toBeDefined();
+describe("available JSON data", () => {
+  const availableKeys = Object.keys(json);
+
+  availableKeys.forEach((key) => {
+    it(`should include ${key}`, () => {
+      // @ts-expect-error
+      expect(json[key]).toBeDefined();
+    });
   });
 });

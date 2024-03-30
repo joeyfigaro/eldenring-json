@@ -1,6 +1,6 @@
 {
   "name": "eldenring-json",
-  "version": "0.0.1",
+  "version": "0.0.0-semantically-released",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "description": "collection of available data for Elden Ring by Fromsoft",
@@ -9,6 +9,7 @@
     "prebuild": "rm -rf dist",
     "build:types": "tsc --emitDeclarationOnly --noEmit false --declaration true",
     "publish": "bunx @morlay/bunpublish",
+    "release": "bunx semantic-release",
     "prepublishOnly": "bun run build"
   },
   "files": [
@@ -30,8 +31,12 @@
   "bugs": "https://github.com/joeyfigaro/eldenring-json/issues",
   "author": "Joey Figaro <coccyx_04rubato@icloud.com>",
   "devDependencies": {
-    "bun-plugin-dts": "^0.2.1",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/exec": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
     "@types/bun": "^1.0.0",
+    "bun-plugin-dts": "^0.2.1",
+    "semantic-release": "^23.0.6",
     "typescript": "^5.2.2"
   }
 }
